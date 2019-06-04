@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	
+	<body>
+		<div id="app">
+			<h1 v-on:click="onAlert">Vue双向数据绑定之原理及实现</h1>
+			<h3>名字: {{name}}</h3>
+			
+			<div>
+				请输入你的名字:<input type="text" class="text" v-model='name' />
+			</div>
+		</div>
+		
+		<script src="js/dep.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/watcher.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/observer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/compiler.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			var app = new Vue({
+				el:'#app',
+				data: {
+					name: 'atom'
+				}, 
+				methods: {
+					onAlert: function(){
+						alert('恭喜你完成了学习!!!')
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
